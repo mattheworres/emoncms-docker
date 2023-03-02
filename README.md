@@ -1,6 +1,6 @@
 Docker image for running [emoncms](https://github.com/emoncms/emoncms) on [Unraid](https://unraid.net).
 
-This image assumes you already have both a MySQL/MariaDB instance handy, as well as an instance of Redis. It will automatically install a MQTT instance to use, but you can configure it to use an exterior instance as well.
+This image assumes you already have the following instances handy: MySQL/MariaDB, Redis and MQTT.
 
 # Quick start
 
