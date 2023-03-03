@@ -7,10 +7,15 @@ RUN apt-get update && apt-get install -y \
               libmcrypt-dev \
               gettext \
               nano \
-              git-core 
+              git-core
 
 # Enable PHP modules
 RUN docker-php-ext-install -j$(nproc) curl json gettext
+RUN pecl install redis \
+    \ && docker-php-ext-enable redis
+# Keeping this here, just in case it's required for interacting with MQTT
+# RUN pecl install Mosquitto-beta \
+#     \ && docker-php-ext-enable mosquitto
 
 RUN a2enmod rewrite
 
