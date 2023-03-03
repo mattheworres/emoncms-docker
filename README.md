@@ -72,6 +72,6 @@ Tag name should be the Emoncms version e.g 11.x.x
 Also push the latest version using `latest` tag
 
 ```bash
-docker tag mattheworres/emoncms:latest
+docker tag mattheworres/emoncms:<latest-version>
 docker tag mattheworres/emoncms:latest
 ```
